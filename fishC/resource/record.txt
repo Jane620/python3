@@ -1,0 +1,14 @@
+PersonA:helo.
+PersonB:Helo.
+==============
+PersonA:what is you name.
+PersonB:my name is jane,and you?
+==============
+PersonA:kate,nice to meet you.
+PersonB:me too, so would you come and join us.
+==============
+PersonA:yes ,for what?
+PersonB:play card or game?
+==============
+PersonA:game.
+PersonB:ok.
