@@ -12,3 +12,7 @@ print(vars())
 
 if 'name' in vars():
     print(True)
+
+# format 特殊用法
+args = list('spam')
+print('first={0},last={1}'.format(args[0],args[-1]))
