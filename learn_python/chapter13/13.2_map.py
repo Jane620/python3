@@ -17,11 +17,12 @@ def dis_for(array):
     return a
 
 def dis_map(array):
-    return map(lambda x:x+1 , array)
+    return map(lambda x:x+1,array)
+    #return map(int.__add__ , array)
 
 def dis_list(array):
     return [x+1 for x in array]
 
 num = [1,2,3,4]
-#dis.dis(dis_for)
-print(dis_for(num))
+dis.dis(dis_map)
+#print(dis_for(num))

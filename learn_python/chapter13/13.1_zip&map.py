@@ -10,5 +10,6 @@ L2 = [5,6,7,8]
 L3 = zip(L1,L2)
 print(list(L3))
 
+#直接用L3存在问题，目测为3.4.4的bug，3.6的版本上无此问题
 for x,y in zip(L1,L2):
     print(x,'+',y,'=',x+y)
