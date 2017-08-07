@@ -16,6 +16,11 @@ def dis_for(array):
         add_func(i+1)
     return a
 
+def dis_for2(array):
+    for x in range(len(array)):
+        array[x] += 10
+    return array
+
 def dis_map(array):
     return map(lambda x:x+1,array)
     #return map(int.__add__ , array)
@@ -24,5 +29,5 @@ def dis_list(array):
     return [x+1 for x in array]
 
 num = [1,2,3,4]
-dis.dis(dis_map)
+dis.dis(dis_for2)
 #print(dis_for(num))
