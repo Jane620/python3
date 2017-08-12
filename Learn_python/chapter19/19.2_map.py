@@ -30,5 +30,3 @@ def myreduce(function,sequence):
 sequence1 = [1,2,3,4]
 print(myreduce(sum,sequence1))
 
-x = sum(sequence1,2)
-print(x)
