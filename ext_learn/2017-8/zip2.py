@@ -1,7 +1,9 @@
 #-*- coding:utf-8 -*-
 
 __author__ = 'wangjf'
-
+"""
+documentation
+"""
 s1,s2 = 'abc','defg'
 
 list1 = [s for s in [s1,s2]]
