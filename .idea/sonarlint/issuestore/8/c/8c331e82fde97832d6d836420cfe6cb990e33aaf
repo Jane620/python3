@@ -1,0 +1,5 @@
+
+hpython:S100"NRename method "getSize" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(‡Åîâùÿÿÿÿ
+cpython:S100"NRename method "setSize" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÉãÈ¼
+cpython:S100"NRename method "delSize" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Ïü
+[python:S101"FRename class "C" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(¬åÊÿ

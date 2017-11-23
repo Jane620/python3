@@ -27,20 +27,17 @@ class SonarReport:
             print('connect fail')
 
     # 通过名字获取id
-    def name_to_id(self):
+    def name_to_id(self,name):
         # GET 获取项目信息API
         index_url = '/api/projects/index'
-        param = {'search': self._name}
+        param = {'search': name}
         project_id = self.get_response(self._url + index_url, param=param, flag=0)
         return project_id[0].get('id') if project_id else 0
 
     # 获取sonar报告
     def get_sonar_report(self):
-        # GET api/projects/index
-        # 查询项目id
-        search_project_url = self._url + '/api/projects/index'
-        param = {'search': self._name}
-        sonar_id = self.get_response(search_project_url, param=param, flag=0)[0].get('id')
+
+        sonar_id = self.name_to_id(self._name)
         if sonar_id:
             project_detail = self._url + '/dashboard/index/{}'.format(sonar_id)
             response = self.get_response(project_detail)
@@ -52,9 +49,12 @@ class SonarReport:
         # GET 指标资源API
         resource = '/api/resources'
         param = {
-            'resource': self.name_to_id(),
+            'resource': self.name_to_id(self._name),
             'metrics': metrics
         }
+        # 找不到项目或者项目名
+        if param.get('resource') == 0:
+            return ''
         res = self.get_response(self._url + resource, param=param, flag=0)
         if res:
             detail = res[0].get('msr')
@@ -64,17 +64,15 @@ class SonarReport:
     # 分析结果
     def analysis(self):
 
+        duplicate_rate = self.get_metrics('duplicated_lines_density') or '0.0%'
         cover_rate = self.get_metrics('coverage') or '0.0%'
         unit_rate = self.get_metrics('test_success_density') or '0.0%'
-        duplicate_rate = self.get_metrics('duplicated_lines_density') or ['0.0%']
-        return [cover_rate, unit_rate, duplicate_rate]
-
+        return [duplicate_rate, cover_rate, unit_rate]
 
 if __name__ == '__main__':
     import sys
-
-    main_url = sys.argv[1] or ''
-    project_name = sys.argv[2] or ''
+    main_url = 'http://10.213.3.181:9000'
+    project_name = ''
     sonar_report = SonarReport(main_url, project_name)
     result = sonar_report.analysis()
-    print('代码覆盖率:{0},单元测试成功率:{1},代码重复率:{2}'.format(result[0], result[1], result[2]))
+    print('代码重复率: {0}, 代码覆盖率: {1}, 单元测试成功率: {2}.'.format(result[0], result[1], result[2]))

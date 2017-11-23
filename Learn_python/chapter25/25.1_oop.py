@@ -8,6 +8,10 @@ __author__ = 'wangjf'
 
 '''
 class Employee:
+
+    def __init__(self,name):
+        self.name = name
+
     def computerSallary(self):
         pass
     def giveRaise(self):
@@ -18,6 +22,10 @@ class Employee:
         pass
 
 class Counter(Employee):
+
+    def __init__(self):
+        super()
+
     def giveRaise(self):
         pass
 
@@ -26,4 +34,4 @@ class Engineer(Employee):
         pass
 
 bob = Counter()
-john = Engineer()
+john = Engineer('name')

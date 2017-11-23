@@ -1,0 +1,4 @@
+
+wpython:S117"]Rename this local variable "provinceList" to match the regular expression ^[_a-z][a-z0-9_]*$.(ΑΥώϊÿÿÿÿ
+spython:S1542"]Rename function "api_get_provinceList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(–ιέ
+zpython:S1542"_Rename function "baike_get_provinceList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(«§Ι³ώÿÿÿÿ

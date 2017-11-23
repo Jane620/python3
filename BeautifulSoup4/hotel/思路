@@ -1,0 +1,24 @@
+步骤分解：
+
+1. 获取所有省份的对应关系（option）
+url = 'http://hotels.ctrip.com/domestic-city-hotel.html'
+2. 根据单城市，对应的星级,酒店类型获取到每一类总数
+page = sum / 25 (单页25)
+3.1 根据单个城市的页数，获取每个页面的详细酒店情况
+url = 'http://hotels.ctrip.com/hotel/beijing1'
+
+3.2 根据每个城市获取所有的酒店信息，将具体的区分写到数据中区分
+更容易实现，通过原始content中检查 'span',class = hotel_halfdiamond03  来区分是3还是4还是5
+test_url = 'http://hotels.ctrip.com/hotel/guanghan750'
+
+
+
+
+已完成部分
+1. 获取每个市对应的地址
+2. 单个市对应的酒店名称
+3. 多个内容写到同一个excel
+
+待完成部分
+1. 部分市通过api没获取到省
+2. 超过最大链接数或者请求被拦截的情况依旧存在

@@ -1,0 +1,5 @@
+
+epython:S100"KRename method "getX" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ó†ìéşÿÿÿÿ
+epython:S100"KRename method "setX" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(èÍÃüÿÿÿÿ
+epython:S100"KRename method "delX" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ï¹Ùşÿÿÿÿ
+[python:S101"FRename class "C" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(¬åÊÿ

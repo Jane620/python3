@@ -1,0 +1,6 @@
+
+bpython:S100"HRename method "x" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¿±Šşÿÿÿÿ
+bpython:S100"HRename method "x" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÃÜ£çÿÿÿÿÿ
+`python:S101"FRename class "A" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ï—ĞÔùÿÿÿÿ
+bpython:S100"HRename method "x" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÃÜ£çÿÿÿÿÿ
+[python:S101"FRename class "B" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(¡¸ß
