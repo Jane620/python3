@@ -5,8 +5,7 @@ import csv
 def IPpool():
 
     reader=csv.reader(open('ip-list.csv'))
-
-    csvfile = open('ips-enable2.csv', 'w')
+    csvfile = open('ips-enable.csv', 'w')
     writer = csv.writer(csvfile)
 
     count = 0
@@ -14,10 +13,12 @@ def IPpool():
         rows = row[0].split('://')
         proxies = {rows[0]:rows[1]}
         count += 1
+        ip = [str(x) for x in rows[1].split()]
         print('进度:', count)
         try:
-            html=requests.get('http://www.baidu.com',proxies=proxies,timeout=0.5)
-            writer.writerow(row)
+            # proxies
+            html=requests.get('http://www.baidu.com',proxies=proxies,timeout=0.05)
+            writer.writerow(ip)
         except Exception as e:
             continue
 
@@ -39,7 +40,7 @@ def IPspider(numpage):
                 tds = item.find_all('td')
                 protols = str.lower(tds[5].text)
                 ips = tds[1].text + ':' + tds[2].text
-                temp.append(protols+'://'+ips)
+                temp.append(protols + '://' +ips)
                 #temp.append(ips)
                 writer.writerow(temp)
             except IndexError:

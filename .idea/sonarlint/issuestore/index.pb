@@ -786,11 +786,15 @@ D
 ../FlaskDemo/psw.csv,9/3/935d77f4fee28c7915168f5525f226f45e5e1ccf
 H
 ../FlaskDemo/test_md5.py,7/c/7ce62dd5aabb931838e39acf4e8dfccade0f59c6
-P
- ../Scrapy/hotel_scrapy/jlin.json,f/6/f64dd8ea2365aec2c142158e074ee42b9c5b6962
 O
 ../Scrapy/hotel_mysql/jlin.json,4/9/49e153a3659cf83855244766574f6304583bc238
 R
 "../Scrapy/hotel_scrapy/HOTEL2.json,3/f/3f1c8a19ce6fcfc614631670c2be7d14a98bd6d8
 Q
 !../Scrapy/hotel_mysql/HOTEL2.json,b/b/bb1ebd9e32b5818adee65da5c8d26031d98e6ea8
+G
+Requests/add_machine.py,6/a/6a658c5e37448712b475b9d50c6bd34726ac9d2f
+]
+-../FlaskDemo/com.nfsq.vem.demo/getDistance.py,e/2/e2617a5d5678fb96399b0028a46813b46ae82a0c
+I
+Requests/login_machine.py,7/9/791b4fe9c1e753af4d0b1d08aa12078185138b01

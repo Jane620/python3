@@ -4,3 +4,5 @@ misc.xml
 modules.xml
 vcs.xml
 python3.iml
+BeautifulSoup4/*
+Requests/*

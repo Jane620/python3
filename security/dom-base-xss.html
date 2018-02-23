@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function test() {
+        var str = document.getElementById("text").value;
+        document.getElementById("t").innerHTML = "<a href=''><img src=# onerror=alert(/xss2/) /><''>testlink</a>";
+    }
+    //GET
+    function test2() {
+        var img = document.createElement("img");
+        img.src = "http://127.0.0.1:5000/query_zjf?latitude=45.7276012&longitude=122.6681158";
+        document.body.appendChild(img)
+    }
+    //POST
+    function test3() {
+        var f = document.createElement("form");
+        f.action = "http://127.0.0.1:5000/query_zjf";
+        f.method = "post";
+        document.body.appendChild(f);
+
+        var i1 = document.createElement("input");
+        i1.name = "latitude";
+        i1.value = "45.7276012";
+        f.appendChild(i1);
+
+        var i2 = document.createElement("input");
+        i2.name = "longitude";
+        i2.value = "122.6681158";
+        f.appendChild(i2);
+
+        f.submit();
+
+    }
+</script>
+<body>
+<div id = "t"></div>
+<input type="text" id="text" value="" t/>
+<input type="button" id="s" value="write" onclick="test3()"/>
+</body>
+</html>

@@ -1,4 +1,3 @@
 
 Hpython:S1481"&Remove the unused local variable "np".(û˜«˜şÿÿÿÿ8¹¶Ñ•ş+
-qpython:S117"URename this local variable "vmId" to match the regular expression ^[_a-z][a-z0-9_]*$.(™óı8»–Œ˜ş+
-Npython:S1481",Remove the unused local variable "psw_list".(±¦¦üÿÿÿÿÿ8ãóŒ˜ş+
+qpython:S117"URename this local variable "vmId" to match the regular expression ^[_a-z][a-z0-9_]*$.(ºù‚8»–Œ˜ş+

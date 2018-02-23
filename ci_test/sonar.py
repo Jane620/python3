@@ -72,7 +72,7 @@ class SonarReport:
 if __name__ == '__main__':
     import sys
     main_url = 'http://10.213.3.181:9000'
-    project_name = ''
+    project_name = 'pallet Maven Webapp'
     sonar_report = SonarReport(main_url, project_name)
     result = sonar_report.analysis()
     print('代码重复率: {0}, 代码覆盖率: {1}, 单元测试成功率: {2}.'.format(result[0], result[1], result[2]))
