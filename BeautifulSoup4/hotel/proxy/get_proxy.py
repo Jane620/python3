@@ -4,8 +4,8 @@ import csv
 
 def IPpool():
 
-    reader=csv.reader(open('ip-list.csv'))
-    csvfile = open('ips-enable.csv', 'w')
+    reader=csv.reader(open('ip-list2.csv'))
+    csvfile = open('ips-enable2.csv', 'w')
     writer = csv.writer(csvfile)
 
     count = 0
@@ -17,14 +17,32 @@ def IPpool():
         print('进度:', count)
         try:
             # proxies
-            html=requests.get('http://www.baidu.com',proxies=proxies,timeout=0.05)
-            writer.writerow(ip)
+            test_url = 'https://m.dianping.com/tuan/ajax/dealShop?dealGroupId=29511665&lat=&lng=&userCityId=3'
+            html=requests.get(test_url,proxies=proxies,timeout=0.05)
+            writer.writerow([rows[0],row[0]])
         except Exception as e:
             continue
 
+def IPpool2():
+
+    #reader=csv.reader(open('ip-list2.csv'))
+    reader = csv.reader(open('ips-enable2.csv'))
+    csvfile = open('ips-enable3.csv', 'w')
+    writer = csv.writer(csvfile)
+
+    count = 0
+    for _,row in reader:
+        rows = row.split('://')
+        proxies = {rows[0]:rows[1]}
+        count += 1
+        ip = [str(x) for x in rows[1].split()]
+        print('进度:', count)
+        content = "{'ipaddr':'"+ row +  "'}"
+        writer.writerow([content])
+
 def IPspider(numpage):
 
-    csvfile = open('ip-list.csv','w')
+    csvfile = open('ip-list2.csv','w')
     writer = csv.writer(csvfile)
     url = 'http://www.xicidaili.com/nn/'
     for num in range(1, numpage + 1):
@@ -48,5 +66,6 @@ def IPspider(numpage):
 
 # 假设爬取前十页所有的IP和端口
 if __name__ == '__main__':
-    #IPspider(100)
-    IPpool()
+    #IPspider(30)
+    #IPpool()
+    IPpool2()

@@ -19,3 +19,7 @@ if __name__ == '__main__':
     print(x.__dict__.keys())
     # 表明y的所有类属性源自继承
     print(y.__dict__.keys())
+    #查看类的继承
+    print(x.__class__)
+    #查看类的超类
+    print(rec.__bases__)
