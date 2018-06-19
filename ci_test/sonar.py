@@ -11,8 +11,8 @@ __author__ = 'wangjf'
 
 class SonarReport:
 
-    def __init__(self, url, name):
-        self._url = url
+    def __init__(self,  name):
+        self._url = 'http://10.213.3.181:9000'
         self._name = name
 
     @staticmethod
@@ -46,7 +46,7 @@ class SonarReport:
     # 获取指标
     def get_metrics(self, metrics):
         metric = []
-        # GET 指标资源API
+        # 指标资源API
         resource = '/api/resources'
         param = {
             'resource': self.name_to_id(self._name),
@@ -71,8 +71,9 @@ class SonarReport:
 
 if __name__ == '__main__':
     import sys
-    main_url = 'http://10.213.3.181:9000'
+    #main_url = 'http://10.213.3.181:9000'
     project_name = 'pallet Maven Webapp'
-    sonar_report = SonarReport(main_url, project_name)
+    #project_name = sys.argv[0]
+    sonar_report = SonarReport(project_name)
     result = sonar_report.analysis()
     print('代码重复率: {0}, 代码覆盖率: {1}, 单元测试成功率: {2}.'.format(result[0], result[1], result[2]))

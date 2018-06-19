@@ -36,7 +36,7 @@ def batch_create():
         vmId = vmId + str(begin+i)
         uuid = uuid + str(begin+i)
         ipcid = vmId
-        input = ts+vmId+uuid+'zfj&^*$!nfsq***yst'
+        input = ts+vmId+uuid+'x`x``
         psw = md5str(input)
         import random
         ip = random.choice(ip_list)
