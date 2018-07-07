@@ -10,6 +10,7 @@
     <orderEntry type="module" module-name="WebHub" />
     <orderEntry type="module" module-name="SdapAutoTest" />
     <orderEntry type="module" module-name="scrapy-examples" />
+    <orderEntry type="module" module-name="CSDN" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
