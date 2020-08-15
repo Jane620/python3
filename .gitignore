@@ -5,3 +5,4 @@ modules.xml
 vcs.xml
 python3.iml
 pytest/.pytest_cache
+.pytest_cache
