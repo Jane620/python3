@@ -1,0 +1,18 @@
+<persons>
+    <person>
+        <id>0001</id>
+        <name>jane</name>
+        <detail>
+            <addr>xiaoshan</addr>
+            <age>20</age>
+        </detail>
+    </person>
+    <person>
+        <id>0002</id>
+        <name>won</name>
+        <detail>
+            <addr>xiaoshan</addr>
+            <age>20</age>
+        </detail>
+    </person>
+</persons>

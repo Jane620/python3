@@ -1,0 +1,8 @@
+[
+  "test_sumary.py::test_ok",
+  "test_sumary.py::test_fail",
+  "test_sumary.py::test_error",
+  "test_sumary.py::test_skip",
+  "test_sumary.py::test_xfail",
+  "test_sumary.py::test_xpass"
+]

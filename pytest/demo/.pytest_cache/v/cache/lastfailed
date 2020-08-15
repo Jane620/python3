@@ -1,0 +1,8 @@
+{
+  "test_class.py::TestClass::test_two": true,
+  "test_sample.py::test_answer": true,
+  "test_sumary.py::test_error": true,
+  "test_sumary.py::test_fail": true,
+  "test_sysexit.py": true,
+  "test_tmpdir.py": true
+}

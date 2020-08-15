@@ -1,0 +1,4 @@
+{
+  "test2.py::test_raise": true,
+  "test3.py::test_postcode": true
+}
